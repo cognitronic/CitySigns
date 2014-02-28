@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="CitySigns.Master.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>City Signs</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/style.css"/>
+    <link rel="stylesheet" href="/Styles/default.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/lean-slider.js"></script>
+    <script type="text/javascript" src="/Scripts/lightbox.min.js"></script>
+    <script type="text/javascript" src="/Scripts/rfg.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.validate.js"></script>
+    <link rel="stylesheet" href="/Styles/lean-slider.css" type="text/css" />
+    <link href="/Styles/shadows.css" rel="stylesheet" />
+    <link href="/Styles/rfg.css" rel="stylesheet" />
+    <link href="/Styles/lightbox.css" rel="stylesheet" />
+    <link href="/Styles/core.css" rel="stylesheet" />
+    <style type="text/css">
+    .water
+    {
+         font-family: Tahoma, Arial, sans-serif;
+         color:gray;
+    }
+    </style>
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#form1").validate();
+            $(".water").each(function () {
+                $tb = $(this);
+                if (this.id == "tbDescription") {
+                    if ($("textarea#tbDescription").val() != this.title)
+                    {
+                        $tb.removeClass("water");
+                    }
+                }
+                if ($tb.val() != this.title) {
+
+                    $tb.removeClass("water");
+                }
+            });
+
+            $(".water").focus(function () {
+                $tb = $(this);
+                if ($tb.val() == this.title) {
+                    $tb.val("");
+                    $tb.removeClass("water");
+                }
+            });
+
+            $(".water").blur(function () {
+                $tb = $(this);
+                if ($.trim($tb.val()) == "") {
+                    $tb.val(this.title);
+                    $tb.addClass("water");
+                }
+            });
+        });
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="internal-pagewrapper">
+     <div class="internal-header">
+       <div class="internal-header-center">
+                    <div class="companyidentity">
+                    <img src="/Images/logo2.png" style="margin-top:10px; padding-left:50px;" />
+                    <h4 class="address" style="margin: 125px 5px 0 75px; float:right;" >209.229.2220 - <a style="color:#0061A2; text-decoration: underline;" href="mailto:info@citysignsmodesto.com">info@citysignsmodesto.com</a> -1101 DOKER DRIVE SUITE D MODESTO, CA 95351&nbsp;&nbsp;</h4>
+                    <div style="float:right;">
+                    <ul id="nav" style="margin-top:-65px;">
+	                    <li><a href="/Homepage.aspx">HOME</a></li>
+	                    <li><a href="/GalleryHome.aspx">GALLERY</a></li>
+	                    <li><a href="/OurCompany.aspx">OUR COMPANY</a></li>
+	                    <li><a href="/Process.aspx">OUR PROCESS</a></li>
+                        <li><a href="/AreasWeServe.aspx">AREAS WE SERVE</a></li>
+                        <li><a href="/ContactUs.aspx">CONTACT US</a></li>
+                    </ul>
+                    </div>
+                
+                </div>
+     </div>
+    </div>
+    <div class="newback1">
+        <img src="/Images/newback.png" width="960px" alt="City Signs Gallery"></img>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+   </div>
+   </div>
+    
+      <div style="width:960px; margin:0 auto;">
+          <div style="margin-bottom: -90px;"><img src="/Images/footer_contactbg.png" alt="" /></div>
+           <div class="one-third" style="margin-left:15px;margin-top: -75px;"><h4 style="margin:0 0 0 5px;"><img src="/Images/bullet_arrow.png" alt="" /> FREE ESTIMATES</h4><p style="font-size:11px; padding-left: 5px;">Here at City Signs we will provide you with custom work that is tailored to your needs. We would be happy to provide you an online quote. Please fill out the applicable fields in our contact form to the side, and click submit. One of our sales representatives will review your information and contact you, usually within 24 hours (excluding weekends). Of course, you can always call us for a quote during business hours. We look forward to hearing from you.</p> 
+        </div>
+        <form id="form1" runat="server" style="margin-top: -80px;">
+        <div class="estimateform" runat="server" id="divSubmit">
+            <telerik:radscriptmanager 
+    ID="RadScriptManager1" 
+    runat="server">
+        <Scripts>
+            <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js" />
+        </Scripts>
+    </telerik:radscriptmanager>
+    <telerik:radajaxmanager 
+    ID="RadAjaxManager1" 
+    runat="server">
+        <AjaxSettings>
+            <telerik:AjaxSetting AjaxControlID="divSubmit">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="divSubmit" LoadingPanelID="RadAjaxLoadingPanel1" />
+                </UpdatedControls>
+            </telerik:AjaxSetting>
+        </AjaxSettings>
+    </telerik:radajaxmanager>
+<telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server"  Skin="Simple" Transparency="15" />
+            
+            <asp:RequiredFieldValidator
+              runat="server"
+                InitialValue="First Name"
+              ID="RequiredFieldValidator1"
+                SetFocusOnError="true"
+                Display="Dynamic"
+                style="width: 175px !important; margin-left: 0px; padding-top: -30px; display: block !important;"
+              ControlToValidate="tbFirstName"
+              CssClass="error"
+              ErrorMessage="*" />
+            <asp:TextBox ClientIDMode="Static" runat="server" ID="tbFirstName" Text="First Name" title="First Name" class="water text-input defaultText required" name="firstname" style="width: 175px;"></asp:TextBox>
+            
+            <asp:RequiredFieldValidator
+              runat="server"
+                InitialValue="Last Name"
+              ID="RequiredFieldValidator2"
+                Display="Dynamic"
+                SetFocusOnError="true"
+                style="width: 155px !important; margin-left: 0px; padding-top: -10px; display: block !important;"
+              ControlToValidate="tbLastName"
+              CssClass="error"
+              ErrorMessage="*" /> 
+            <asp:TextBox runat="server" ID="tbLastName" Text="Last Name" title="Last Name" class="water" name="lastname" style=" width: 175px;"></asp:TextBox><br />
+            
+             <asp:RegularExpressionValidator 
+                ID="valEmailAddress"
+                ControlToValidate="tbEmail"
+                Display="Dynamic"
+                SetFocusOnError="true"
+                style="width: 155px !important; margin-left: 0px; padding-top: -10px; display: block !important;"
+                CssClass="error"
+                ValidationExpression=".*@.*\..*" 
+                ErrorMessage="*" 
+                EnableClientScript="true"
+                Runat="server"/>
+            <asp:TextBox runat="server" ID="tbEmail" Text="Email" title="Email" class="water" name="email" style="width: 175px;"></asp:TextBox><br /> 
+            
+            <asp:RequiredFieldValidator
+              runat="server"
+              InitialValue="Phone"
+              ID="RequiredFieldValidator4"
+                SetFocusOnError="true"
+                Display="dynamic"
+                style="width: 155px !important; margin-left: 0px; padding-top: -10px; display: block !important;"
+              ControlToValidate="tbPhone"
+              CssClass="error"
+              ErrorMessage="*"/> 
+            <asp:TextBox runat="server" ID="tbPhone" Text="Phone" title="Phone" class="water" name="phone" style="margin-bottom: 5px; width: 175px;"></asp:TextBox><br />
+
+                <asp:Label runat="server" ID="lblMessage" style="display: block !important; font-size: 11px; color: #f00; margin-top: -5px;"/>
+            </div>
+            <div class="one-third">
+                <asp:TextBox runat="server" ID="tbDescription" TextMode="MultiLine" style="width: 350px; height: 100px; margin-bottom: 5px; margin-left: 80px;" Text="Enter Description" title="Enter Description" class="water" name="lastname"></asp:TextBox>
+                <asp:RequiredFieldValidator
+                runat="server"
+                InitialValue="Enter Description"
+                ID="RequiredFieldValidator3"
+                SetFocusOnError="true"
+                Display="Dynamic"
+                style="display: block !important; "
+                  ControlToValidate="tbDescription"
+                  CssClass="error"
+                  ErrorMessage="" /><br /> 
+            
+                <asp:LinkButton
+                    runat="server"
+                    ID="lbFreeEstimate"
+                    style="position:relative; margin-top:20px; margin-left:200px;width:110px;height:17px; border:none;"
+                    OnClick="FreeEstimateClicked">
+                        <img src="/Images/button_learn_submit.png" alt="Submit Free Estimate" />
+                </asp:LinkButton>
+        </div>
+        </form>
+        </div> 
+   <div class="footerwrap">
+ 
+   </div>
+</body>
+</html>

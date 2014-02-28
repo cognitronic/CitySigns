@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EFE2A4F-1088-4E6F-89DB-7B7C152EB87A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CitySigns</RootNamespace>
+    <AssemblyName>CitySigns</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.Design, Version=2012.2.815.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q2 2012 SP1\Bin40\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>C:\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q2 2012 SP1\Bin40\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>C:\Program Files (x86)\Telerik\RadControls for ASP.NET AJAX Q2 2012 SP1\Bin40\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas-We-Serve\ArnoldCA.aspx" />
+    <Content Include="Areas-We-Serve\AtwaterCA.aspx" />
+    <Content Include="Areas-We-Serve\AuburnCA.aspx" />
+    <Content Include="Areas-We-Serve\CarmelCA.aspx" />
+    <Content Include="Areas-We-Serve\CeresCA.aspx" />
+    <Content Include="Areas-We-Serve\ConcordCA.aspx" />
+    <Content Include="Areas-We-Serve\DanvilleCA.aspx" />
+    <Content Include="Areas-We-Serve\DelhiCA.aspx" />
+    <Content Include="Areas-We-Serve\DosPalosCA.aspx" />
+    <Content Include="Areas-We-Serve\ElkGroveCA.aspx" />
+    <Content Include="Areas-We-Serve\FairfieldCA.aspx" />
+    <Content Include="Areas-We-Serve\FremontCA.aspx" />
+    <Content Include="Areas-We-Serve\FresnoCA.aspx" />
+    <Content Include="Areas-We-Serve\GaltCA.aspx" />
+    <Content Include="Areas-We-Serve\GilroyCA.aspx" />
+    <Content Include="Areas-We-Serve\GreenfieldCA.aspx" />
+    <Content Include="Areas-We-Serve\HanfordCA.aspx" />
+    <Content Include="Areas-We-Serve\HaywardCA.aspx" />
+    <Content Include="Areas-We-Serve\HollisterCA.aspx" />
+    <Content Include="Areas-We-Serve\IoneCA.aspx" />
+    <Content Include="Areas-We-Serve\JacksonCA.aspx" />
+    <Content Include="Areas-We-Serve\LivermoreCA.aspx" />
+    <Content Include="Areas-We-Serve\LodiCA.aspx" />
+    <Content Include="Areas-We-Serve\LosBanosCA.aspx" />
+    <Content Include="Areas-We-Serve\OakdaleCA.aspx" />
+    <Content Include="Areas-We-Serve\OaklandCA.aspx" />
+    <Content Include="Areas-We-Serve\PattersonCA.aspx" />
+    <Content Include="Areas-We-Serve\RedwoodCityCA.aspx" />
+    <Content Include="Areas-We-Serve\ReedleyCA.aspx" />
+    <Content Include="Areas-We-Serve\RichmondCA.aspx" />
+    <Content Include="Areas-We-Serve\RiponCA.aspx" />
+    <Content Include="Areas-We-Serve\RiverbankCA.aspx" />
+    <Content Include="Areas-We-Serve\RosevilleCA.aspx" />
+    <Content Include="Areas-We-Serve\Sacramento.aspx" />
+    <Content Include="Areas-We-Serve\Salida.aspx" />
+    <Content Include="Areas-We-Serve\SanFrancisco.aspx" />
+    <Content Include="Areas-We-Serve\SanJose.aspx" />
+    <Content Include="Areas-We-Serve\SanLeandro.aspx" />
+    <Content Include="Areas-We-Serve\SanMateo.aspx" />
+    <Content Include="Areas-We-Serve\SanRafael.aspx" />
+    <Content Include="Areas-We-Serve\SantaCruz.aspx" />
+    <Content Include="Areas-We-Serve\SantaRosa.aspx" />
+    <Content Include="Areas-We-Serve\Sonoma.aspx" />
+    <Content Include="Areas-We-Serve\Sonora.aspx" />
+    <Content Include="Areas-We-Serve\Stockton.aspx" />
+    <Content Include="Areas-We-Serve\Sunnyvale.aspx" />
+    <Content Include="Areas-We-Serve\Tracy.aspx" />
+    <Content Include="Areas-We-Serve\Tulare.aspx" />
+    <Content Include="Areas-We-Serve\Turlock.aspx" />
+    <Content Include="Areas-We-Serve\Vacaville.aspx" />
+    <Content Include="Areas-We-Serve\Vallejo.aspx" />
+    <Content Include="Areas-We-Serve\ValleySprings.aspx" />
+    <Content Include="Areas-We-Serve\Visalia.aspx" />
+    <Content Include="Areas-We-Serve\Waterford.aspx" />
+    <Content Include="Areas-We-Serve\Watsonville.aspx" />
+    <Content Include="Areas-We-Serve\Woodland.aspx" />
+    <Content Include="Areas-We-Serve\YubaCity.aspx" />
+    <Content Include="AreasWeServe.aspx" />
+    <Content Include="Banners.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Digital-Graphics.aspx" />
+    <Content Include="Dimensional-Signs.aspx" />
+    <Content Include="Directory-Signs.aspx" />
+    <Content Include="Gallery.aspx" />
+    <Content Include="GalleryHome.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Homepage.aspx" />
+    <Content Include="Illuminated-Signs.aspx" />
+    <Content Include="Images\arrows.png" />
+    <Content Include="Images\banner-abstract.png" />
+    <Content Include="Images\banners.png" />
+    <Content Include="Images\banner\banner-abstract.png" />
+    <Content Include="Images\brian.jpg" />
+    <Content Include="Images\bullets.png" />
+    <Content Include="Images\bullet_arrow.png" />
+    <Content Include="Images\button_banners.png" />
+    <Content Include="Images\button_digital_graphics.png" />
+    <Content Include="Images\button_dimensional_signs.png" />
+    <Content Include="Images\button_directory_signs.png" />
+    <Content Include="Images\button_illuminated_signs.png" />
+    <Content Include="Images\button_learn_more.png" />
+    <Content Include="Images\button_learn_submit.png" />
+    <Content Include="Images\button_monument_signs.png" />
+    <Content Include="Images\button_service_install.png" />
+    <Content Include="Images\button_sign_design.png" />
+    <Content Include="Images\button_site_signs.png" />
+    <Content Include="Images\button_vehicle_graphics.png" />
+    <Content Include="Images\caryn.jpg" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\content_bg.jpg" />
+    <Content Include="Images\content_footer_bg.jpg" />
+    <Content Include="Images\content_header_bg.jpg" />
+    <Content Include="Images\demoimages\homebg.jpg" />
+    <Content Include="Images\demoimages\indexbg.jpg" />
+    <Content Include="Images\digital_graphics.png" />
+    <Content Include="Images\dimensional_signs.png" />
+    <Content Include="Images\directory_signs.png" />
+    <Content Include="Images\drew.jpg" />
+    <Content Include="Images\footerbg_horizontal.jpg" />
+    <Content Include="Images\footer_contactbg.png" />
+    <Content Include="Images\greg.jpg" />
+    <Content Include="Images\headerbg_center.jpg" />
+    <Content Include="Images\headerbg_horizontal.jpg" />
+    <Content Include="Images\headerbg_horizontal2.jpg" />
+    <Content Include="Images\illuminated_signs.png" />
+    <Content Include="Images\images_quoterequest.png" />
+    <Content Include="Images\indexbg.jpg" />
+    <Content Include="Images\james.jpg" />
+    <Content Include="Images\jason.jpg" />
+    <Content Include="Images\jesse.jpg" />
+    <Content Include="Images\kevin.jpg" />
+    <Content Include="Images\load.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo2.png" />
+    <Content Include="Images\map.jpg" />
+    <Content Include="Images\mario.jpg" />
+    <Content Include="Images\monument_signs.png" />
+    <Content Include="Images\monument_signslg.png" />
+    <Content Include="Images\newback.png" />
+    <Content Include="Images\newback2.png" />
+    <Content Include="Images\NorcalMap.jpg" />
+    <Content Include="Images\OurCompany.jpg" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\process.png" />
+    <Content Include="Images\process_steps.png" />
+    <Content Include="Images\radio.png" />
+    <Content Include="Images\radio_selected.png" />
+    <Content Include="Images\rays-carpets-02.jpg" />
+    <Content Include="Images\rays-carpets-03.jpg" />
+    <Content Include="Images\rays-carpets.jpg" />
+    <Content Include="Images\rays-logo.jpg" />
+    <Content Include="Images\service_installation.png" />
+    <Content Include="Images\service_installationlg.png" />
+    <Content Include="Images\sign_design.png" />
+    <Content Include="Images\sign_designlg.png" />
+    <Content Include="Images\site_signs.png" />
+    <Content Include="Images\site_signslg.png" />
+    <Content Include="Images\slider1.jpg" />
+    <Content Include="Images\slider10.jpg" />
+    <Content Include="Images\slider2.jpg" />
+    <Content Include="Images\slider3.jpg" />
+    <Content Include="Images\slider4.jpg" />
+    <Content Include="Images\slider5.jpg" />
+    <Content Include="Images\slider6.jpg" />
+    <Content Include="Images\slider7.jpg" />
+    <Content Include="Images\slider8.jpg" />
+    <Content Include="Images\slider9.jpg" />
+    <Content Include="Images\sliderbg.png" />
+    <Content Include="Images\slider_arrow_left.png" />
+    <Content Include="Images\slider_arrow_right.png" />
+    <Content Include="Images\social_fb.png" />
+    <Content Include="Images\social_tw.png" />
+    <Content Include="Images\social_yt.png" />
+    <Content Include="Areas-We-Serve\LosGatosCA.aspx" />
+    <Content Include="Areas-We-Serve\MaderaCA.aspx" />
+    <Content Include="Areas-We-Serve\MantecaCA.aspx" />
+    <Content Include="Areas-We-Serve\MercedCA.aspx" />
+    <Content Include="Areas-We-Serve\MilpitasCA.aspx" />
+    <Content Include="Areas-We-Serve\ModestoCA.aspx" />
+    <Content Include="Areas-We-Serve\NapaCA.aspx" />
+    <Content Include="Areas-We-Serve\NewmanCA.aspx" />
+    <Content Include="Areas-We-Serve\NovatoCA.aspx" />
+    <Content Include="Images\stuart.jpg" />
+    <Content Include="Images\vehicle_graphics.png" />
+    <Content Include="Monument-Signs.aspx" />
+    <Content Include="OurCompany.aspx" />
+    <Content Include="Process.aspx" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.nivo.slider.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.slickforms.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lean-slider.js" />
+    <Content Include="Scripts\lightbox.min.js" />
+    <Content Include="Scripts\modernizr-2.6.1.min.js" />
+    <Content Include="Scripts\rfg.js" />
+    <Content Include="Service-Installation.aspx" />
+    <Content Include="Sign-Design.aspx" />
+    <Content Include="Site-Signs.aspx" />
+    <Content Include="Styles\core.css" />
+    <Content Include="Styles\default.css" />
+    <Content Include="Styles\HomeStyles.css" />
+    <Content Include="Styles\Images\banner-abstract.png" />
+    <Content Include="Styles\Images\indexbg.jpg" />
+    <Content Include="Styles\lean-slider.css" />
+    <Content Include="Styles\lightbox.css" />
+    <Content Include="Styles\rfg.css" />
+    <Content Include="Styles\shadows.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Vehicle-Graphics.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas-We-Serve\ArnoldCA.aspx.cs">
+      <DependentUpon>ArnoldCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ArnoldCA.aspx.designer.cs">
+      <DependentUpon>ArnoldCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\AtwaterCA.aspx.cs">
+      <DependentUpon>AtwaterCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\AtwaterCA.aspx.designer.cs">
+      <DependentUpon>AtwaterCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\AuburnCA.aspx.cs">
+      <DependentUpon>AuburnCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\AuburnCA.aspx.designer.cs">
+      <DependentUpon>AuburnCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\CarmelCA.aspx.cs">
+      <DependentUpon>CarmelCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\CarmelCA.aspx.designer.cs">
+      <DependentUpon>CarmelCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\CeresCA.aspx.cs">
+      <DependentUpon>CeresCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\CeresCA.aspx.designer.cs">
+      <DependentUpon>CeresCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ConcordCA.aspx.cs">
+      <DependentUpon>ConcordCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ConcordCA.aspx.designer.cs">
+      <DependentUpon>ConcordCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\DanvilleCA.aspx.cs">
+      <DependentUpon>DanvilleCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\DanvilleCA.aspx.designer.cs">
+      <DependentUpon>DanvilleCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\DelhiCA.aspx.cs">
+      <DependentUpon>DelhiCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\DelhiCA.aspx.designer.cs">
+      <DependentUpon>DelhiCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\DosPalosCA.aspx.cs">
+      <DependentUpon>DosPalosCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\DosPalosCA.aspx.designer.cs">
+      <DependentUpon>DosPalosCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ElkGroveCA.aspx.cs">
+      <DependentUpon>ElkGroveCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ElkGroveCA.aspx.designer.cs">
+      <DependentUpon>ElkGroveCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\FairfieldCA.aspx.cs">
+      <DependentUpon>FairfieldCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\FairfieldCA.aspx.designer.cs">
+      <DependentUpon>FairfieldCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\FremontCA.aspx.cs">
+      <DependentUpon>FremontCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\FremontCA.aspx.designer.cs">
+      <DependentUpon>FremontCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\FresnoCA.aspx.cs">
+      <DependentUpon>FresnoCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\FresnoCA.aspx.designer.cs">
+      <DependentUpon>FresnoCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\GaltCA.aspx.cs">
+      <DependentUpon>GaltCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\GaltCA.aspx.designer.cs">
+      <DependentUpon>GaltCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\GilroyCA.aspx.cs">
+      <DependentUpon>GilroyCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\GilroyCA.aspx.designer.cs">
+      <DependentUpon>GilroyCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\GreenfieldCA.aspx.cs">
+      <DependentUpon>GreenfieldCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\GreenfieldCA.aspx.designer.cs">
+      <DependentUpon>GreenfieldCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\HanfordCA.aspx.cs">
+      <DependentUpon>HanfordCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\HanfordCA.aspx.designer.cs">
+      <DependentUpon>HanfordCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\HaywardCA.aspx.cs">
+      <DependentUpon>HaywardCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\HaywardCA.aspx.designer.cs">
+      <DependentUpon>HaywardCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\HollisterCA.aspx.cs">
+      <DependentUpon>HollisterCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\HollisterCA.aspx.designer.cs">
+      <DependentUpon>HollisterCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\IoneCA.aspx.cs">
+      <DependentUpon>IoneCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\IoneCA.aspx.designer.cs">
+      <DependentUpon>IoneCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\JacksonCA.aspx.cs">
+      <DependentUpon>JacksonCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\JacksonCA.aspx.designer.cs">
+      <DependentUpon>JacksonCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LivermoreCA.aspx.cs">
+      <DependentUpon>LivermoreCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LivermoreCA.aspx.designer.cs">
+      <DependentUpon>LivermoreCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LodiCA.aspx.cs">
+      <DependentUpon>LodiCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LodiCA.aspx.designer.cs">
+      <DependentUpon>LodiCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LosBanosCA.aspx.cs">
+      <DependentUpon>LosBanosCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LosBanosCA.aspx.designer.cs">
+      <DependentUpon>LosBanosCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\OakdaleCA.aspx.cs">
+      <DependentUpon>OakdaleCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\OakdaleCA.aspx.designer.cs">
+      <DependentUpon>OakdaleCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\OaklandCA.aspx.cs">
+      <DependentUpon>OaklandCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\OaklandCA.aspx.designer.cs">
+      <DependentUpon>OaklandCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\PattersonCA.aspx.cs">
+      <DependentUpon>PattersonCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\PattersonCA.aspx.designer.cs">
+      <DependentUpon>PattersonCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RedwoodCityCA.aspx.cs">
+      <DependentUpon>RedwoodCityCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RedwoodCityCA.aspx.designer.cs">
+      <DependentUpon>RedwoodCityCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ReedleyCA.aspx.cs">
+      <DependentUpon>ReedleyCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ReedleyCA.aspx.designer.cs">
+      <DependentUpon>ReedleyCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RichmondCA.aspx.cs">
+      <DependentUpon>RichmondCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RichmondCA.aspx.designer.cs">
+      <DependentUpon>RichmondCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RiponCA.aspx.cs">
+      <DependentUpon>RiponCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RiponCA.aspx.designer.cs">
+      <DependentUpon>RiponCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RiverbankCA.aspx.cs">
+      <DependentUpon>RiverbankCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RiverbankCA.aspx.designer.cs">
+      <DependentUpon>RiverbankCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RosevilleCA.aspx.cs">
+      <DependentUpon>RosevilleCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\RosevilleCA.aspx.designer.cs">
+      <DependentUpon>RosevilleCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sacramento.aspx.cs">
+      <DependentUpon>Sacramento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sacramento.aspx.designer.cs">
+      <DependentUpon>Sacramento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Salida.aspx.cs">
+      <DependentUpon>Salida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Salida.aspx.designer.cs">
+      <DependentUpon>Salida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanFrancisco.aspx.cs">
+      <DependentUpon>SanFrancisco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanFrancisco.aspx.designer.cs">
+      <DependentUpon>SanFrancisco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanJose.aspx.cs">
+      <DependentUpon>SanJose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanJose.aspx.designer.cs">
+      <DependentUpon>SanJose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanLeandro.aspx.cs">
+      <DependentUpon>SanLeandro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanLeandro.aspx.designer.cs">
+      <DependentUpon>SanLeandro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanMateo.aspx.cs">
+      <DependentUpon>SanMateo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanMateo.aspx.designer.cs">
+      <DependentUpon>SanMateo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanRafael.aspx.cs">
+      <DependentUpon>SanRafael.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SanRafael.aspx.designer.cs">
+      <DependentUpon>SanRafael.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SantaCruz.aspx.cs">
+      <DependentUpon>SantaCruz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SantaCruz.aspx.designer.cs">
+      <DependentUpon>SantaCruz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SantaRosa.aspx.cs">
+      <DependentUpon>SantaRosa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\SantaRosa.aspx.designer.cs">
+      <DependentUpon>SantaRosa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sonoma.aspx.cs">
+      <DependentUpon>Sonoma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sonoma.aspx.designer.cs">
+      <DependentUpon>Sonoma.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sonora.aspx.cs">
+      <DependentUpon>Sonora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sonora.aspx.designer.cs">
+      <DependentUpon>Sonora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Stockton.aspx.cs">
+      <DependentUpon>Stockton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Stockton.aspx.designer.cs">
+      <DependentUpon>Stockton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sunnyvale.aspx.cs">
+      <DependentUpon>Sunnyvale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Sunnyvale.aspx.designer.cs">
+      <DependentUpon>Sunnyvale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Tracy.aspx.cs">
+      <DependentUpon>Tracy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Tracy.aspx.designer.cs">
+      <DependentUpon>Tracy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Tulare.aspx.cs">
+      <DependentUpon>Tulare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Tulare.aspx.designer.cs">
+      <DependentUpon>Tulare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Turlock.aspx.cs">
+      <DependentUpon>Turlock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Turlock.aspx.designer.cs">
+      <DependentUpon>Turlock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Vacaville.aspx.cs">
+      <DependentUpon>Vacaville.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Vacaville.aspx.designer.cs">
+      <DependentUpon>Vacaville.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Vallejo.aspx.cs">
+      <DependentUpon>Vallejo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Vallejo.aspx.designer.cs">
+      <DependentUpon>Vallejo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ValleySprings.aspx.cs">
+      <DependentUpon>ValleySprings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ValleySprings.aspx.designer.cs">
+      <DependentUpon>ValleySprings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Visalia.aspx.cs">
+      <DependentUpon>Visalia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Visalia.aspx.designer.cs">
+      <DependentUpon>Visalia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Waterford.aspx.cs">
+      <DependentUpon>Waterford.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Waterford.aspx.designer.cs">
+      <DependentUpon>Waterford.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Watsonville.aspx.cs">
+      <DependentUpon>Watsonville.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Watsonville.aspx.designer.cs">
+      <DependentUpon>Watsonville.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Woodland.aspx.cs">
+      <DependentUpon>Woodland.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\Woodland.aspx.designer.cs">
+      <DependentUpon>Woodland.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\YubaCity.aspx.cs">
+      <DependentUpon>YubaCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\YubaCity.aspx.designer.cs">
+      <DependentUpon>YubaCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AreasWeServe.aspx.cs">
+      <DependentUpon>AreasWeServe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreasWeServe.aspx.designer.cs">
+      <DependentUpon>AreasWeServe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banners.aspx.cs">
+      <DependentUpon>Banners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Banners.aspx.designer.cs">
+      <DependentUpon>Banners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Digital-Graphics.aspx.cs">
+      <DependentUpon>Digital-Graphics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Digital-Graphics.aspx.designer.cs">
+      <DependentUpon>Digital-Graphics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dimensional-Signs.aspx.cs">
+      <DependentUpon>Dimensional-Signs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dimensional-Signs.aspx.designer.cs">
+      <DependentUpon>Dimensional-Signs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory-Signs.aspx.cs">
+      <DependentUpon>Directory-Signs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory-Signs.aspx.designer.cs">
+      <DependentUpon>Directory-Signs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GalleryHome.aspx.cs">
+      <DependentUpon>GalleryHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GalleryHome.aspx.designer.cs">
+      <DependentUpon>GalleryHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LosGatosCA.aspx.cs">
+      <DependentUpon>LosGatosCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\LosGatosCA.aspx.designer.cs">
+      <DependentUpon>LosGatosCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MaderaCA.aspx.cs">
+      <DependentUpon>MaderaCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MaderaCA.aspx.designer.cs">
+      <DependentUpon>MaderaCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MantecaCA.aspx.cs">
+      <DependentUpon>MantecaCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MantecaCA.aspx.designer.cs">
+      <DependentUpon>MantecaCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HelperUtils.cs" />
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Illuminated-Signs.aspx.cs">
+      <DependentUpon>Illuminated-Signs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Illuminated-Signs.aspx.designer.cs">
+      <DependentUpon>Illuminated-Signs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MercedCA.aspx.cs">
+      <DependentUpon>MercedCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MercedCA.aspx.designer.cs">
+      <DependentUpon>MercedCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MilpitasCA.aspx.cs">
+      <DependentUpon>MilpitasCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\MilpitasCA.aspx.designer.cs">
+      <DependentUpon>MilpitasCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ModestoCA.aspx.cs">
+      <DependentUpon>ModestoCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\ModestoCA.aspx.designer.cs">
+      <DependentUpon>ModestoCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\NapaCA.aspx.cs">
+      <DependentUpon>NapaCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\NapaCA.aspx.designer.cs">
+      <DependentUpon>NapaCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\NewmanCA.aspx.cs">
+      <DependentUpon>NewmanCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\NewmanCA.aspx.designer.cs">
+      <DependentUpon>NewmanCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas-We-Serve\NovatoCA.aspx.cs">
+      <DependentUpon>NovatoCA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areas-We-Serve\NovatoCA.aspx.designer.cs">
+      <DependentUpon>NovatoCA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Monument-Signs.aspx.cs">
+      <DependentUpon>Monument-Signs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Monument-Signs.aspx.designer.cs">
+      <DependentUpon>Monument-Signs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OurCompany.aspx.cs">
+      <DependentUpon>OurCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OurCompany.aspx.designer.cs">
+      <DependentUpon>OurCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Process.aspx.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Process.aspx.designer.cs">
+      <DependentUpon>Process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service-Installation.aspx.cs">
+      <DependentUpon>Service-Installation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service-Installation.aspx.designer.cs">
+      <DependentUpon>Service-Installation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign-Design.aspx.cs">
+      <DependentUpon>Sign-Design.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign-Design.aspx.designer.cs">
+      <DependentUpon>Sign-Design.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site-Signs.aspx.cs">
+      <DependentUpon>Site-Signs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site-Signs.aspx.designer.cs">
+      <DependentUpon>Site-Signs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle-Graphics.aspx.cs">
+      <DependentUpon>Vehicle-Graphics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle-Graphics.aspx.designer.cs">
+      <DependentUpon>Vehicle-Graphics.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Main.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57312</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
